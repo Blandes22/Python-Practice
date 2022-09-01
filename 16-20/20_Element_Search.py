@@ -14,20 +14,18 @@ def binary_search(key: int, low: int, high: int, l: list):
     if key == mid, return true
     if key > mid, return the function and check the right side of the list
     if key < mid, return the function and check the left side of the list
-
-    if low == mid return false 
     
     """
     mid = (low + high) // 2
 
     if l[mid] == key:
         return True
-    if (low == mid) or (high == mid) and (l[mid] != key):
+    if (low == mid) or (high == mid):
         return False
     if key > l[mid]:
-        return binary_search(key, mid, high, l)
+        return binary_search(key, mid + 1, high, l)
     if key < l[mid]:
-        return binary_search(key, low, mid, l)
+        return binary_search(key, low, mid - 1, l)
 
 if __name__ == "__main__":
     l = generate_sorted_list()

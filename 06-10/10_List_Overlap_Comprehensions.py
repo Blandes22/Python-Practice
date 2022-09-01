@@ -2,11 +2,11 @@
 
 def generate_list():
     from random import randint
-    return [randint(0, 20) for i in range(1, randint(15, 20))]
+    return [randint(0, 20) for i in range(1, randint(15, (20 + 1)))] #list of 15 to 20 numbers using random numbers 0 to 20
 
 a = generate_list()
 b = generate_list()
-c = list(set([i for i in a if i in b]))
+c = list(set([i for i in a if i in b])) #list of all a values in b
 print(c)
 
 #due to following the extra steps in project 05, this project is nearly identical to project 05

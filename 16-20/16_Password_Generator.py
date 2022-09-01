@@ -16,20 +16,19 @@ all = digit + lower_case + upper_case + symbol
 ans = input("For a weak password type weak, for a strong password type strong: ").lower()
 
 if 's' in ans:
+    #guarentees that one character from each type will be in the password then adds the remaining characters
     temp = (random.choice(digit) + random.choice(lower_case) + random.choice(upper_case) + random.choice(symbol))
-    for i in range (12 - 4):
+    for i in range (12 - 4): #used for a 12 digit password minus the four from above
         temp += random.choice(all)   
-    
-    temp = [x for x in temp]
-    random.shuffle(temp)
+
+    temp = [x for x in temp] #list needed for shuffle function
+    random.shuffle(temp)     
     password = "".join(temp)
 
-    #guarentees that one character from each type will be in the password then adds the remaining characters
+    print(f"Your new password is: \n{password}")
 
-    print("Your new password is: \n{}".format(password))
-
-elif 'w' in ans:
+else:
     temp = random.choice(adjective) + random.choice(noun) + str("".join(random.sample(digit, 2)))
     password = "".join(temp)
 
-    print("Your new password is: \n{}".format(password))
+    print(f"Your new password is: \n{password}")

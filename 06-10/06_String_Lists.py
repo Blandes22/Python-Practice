@@ -2,6 +2,7 @@
 
 str = input("Please enter a string: ")
 
+#str[::-1] returns the string in reverse
 if str == str[::-1]:
     print("Your string is a palindrome.")
 else:

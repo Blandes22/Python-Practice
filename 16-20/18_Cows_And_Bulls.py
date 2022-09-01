@@ -21,7 +21,7 @@ def check_guess(ans, guess):
         elif guess[i] in ans:
             bulls += 1
         
-    print("Cows: {}    Bulls: {}".format(cows, bulls))
+    print(f"Cows: {cows}    Bulls: {bulls}")
     return
 
 def you_win(a):
