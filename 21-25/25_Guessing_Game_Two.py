@@ -21,9 +21,9 @@ def binary_search(low: int, high: int, g: int, nums: list):
     print(f"I guess: {nums[mid]}")
     ans = input().lower()
    
-    if 'high' in ans:
+    if 'h' in ans:
         return binary_search(mid + 1, high, g, nums)
-    elif 'low' in ans:
+    elif 'l' in ans:
         return binary_search(low, mid - 1, g, nums)
     else:
         print(f"I guessed your number, {nums[mid]}, in {g} guesses!")

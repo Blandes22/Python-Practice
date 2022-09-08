@@ -3,7 +3,6 @@ This exercise is the first in a set of 3 that will result in a game of hangman
 for the first exercise, we will pull text from the SOWPODS list of words and choose one
 """
 from random import randint
-from tkinter import N
 
 def get_file(s: str):
     with open(s, 'r') as file:
